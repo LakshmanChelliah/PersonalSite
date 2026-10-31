@@ -1,0 +1,170 @@
+@import "@fontsource/familjen-grotesk/latin-400.css";
+@import "@fontsource/familjen-grotesk/latin-500.css";
+@import "@fontsource/bodoni-moda/latin-400.css";
+@import "@fontsource/pinyon-script/latin-400.css";
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: "Bodoni Moda", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Familjen Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: "Bodoni Moda", "Iowan Old Style", "Palatino Linotype", serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+  --radius-3xl: 2px;
+  --radius-4xl: 2px;
+}
+
+:root {
+  --background: #f6f1e7;
+  --foreground: #241c15;
+  --card: #f6f1e7;
+  --card-foreground: #241c15;
+  --popover: #f8f4ec;
+  --popover-foreground: #241c15;
+  --primary: #241c15;
+  --primary-foreground: #f6f1e7;
+  --secondary: #ebe4d8;
+  --secondary-foreground: #241c15;
+  --muted: #ebe4d8;
+  --muted-foreground: #5e5146;
+  --accent: #ebe4d8;
+  --accent-foreground: #241c15;
+  --destructive: #7a3b32;
+  --border: #c9bba8;
+  --input: #8f8172;
+  --ring: #5e5146;
+  --chart-1: #241c15;
+  --chart-2: #5e5146;
+  --chart-3: #8f8172;
+  --chart-4: #c9bba8;
+  --chart-5: #ebe4d8;
+  --radius: 2px;
+  --sidebar: #f6f1e7;
+  --sidebar-foreground: #241c15;
+  --sidebar-primary: #241c15;
+  --sidebar-primary-foreground: #f6f1e7;
+  --sidebar-accent: #ebe4d8;
+  --sidebar-accent-foreground: #241c15;
+  --sidebar-border: #c9bba8;
+  --sidebar-ring: #5e5146;
+  --gold: #8a6f3e;
+}
+
+.dark {
+  --background: #f6f1e7;
+  --foreground: #241c15;
+  --card: #f6f1e7;
+  --card-foreground: #241c15;
+  --popover: #f8f4ec;
+  --popover-foreground: #241c15;
+  --primary: #241c15;
+  --primary-foreground: #f6f1e7;
+  --secondary: #ebe4d8;
+  --secondary-foreground: #241c15;
+  --muted: #ebe4d8;
+  --muted-foreground: #5e5146;
+  --accent: #ebe4d8;
+  --accent-foreground: #241c15;
+  --destructive: #7a3b32;
+  --border: #c9bba8;
+  --input: #8f8172;
+  --ring: #5e5146;
+  --chart-1: #241c15;
+  --chart-2: #5e5146;
+  --chart-3: #8f8172;
+  --chart-4: #c9bba8;
+  --chart-5: #ebe4d8;
+  --sidebar: #f6f1e7;
+  --sidebar-foreground: #241c15;
+  --sidebar-primary: #241c15;
+  --sidebar-primary-foreground: #f6f1e7;
+  --sidebar-accent: #ebe4d8;
+  --sidebar-accent-foreground: #241c15;
+  --sidebar-border: #c9bba8;
+  --sidebar-ring: #5e5146;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    color-scheme: light;
+    background: var(--background);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #e7dcc8;
+    color: var(--foreground);
+  }
+}
+
+/* The only antique-gold mark on the site. */
+.gold-rule {
+  display: block;
+  width: 7.5rem;
+  height: 1px;
+  background: var(--gold);
+  border: 0;
+}
+
+/* Calligraphy, used once, on the homepage. */
+.font-script {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
