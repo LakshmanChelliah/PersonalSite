@@ -47,7 +47,7 @@ function Shell() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Embroidery-rcs">
+    <BrowserRouter>
       <BagProvider>
         <Shell />
       </BagProvider>

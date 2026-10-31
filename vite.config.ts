@@ -15,7 +15,7 @@ function pagesFallback() {
 }
 
 export default defineConfig({
-  base: "/Embroidery-rcs/",
+  base: "/",
   plugins: [react(), tailwindcss(), pagesFallback()],
   resolve: {
     alias: {
